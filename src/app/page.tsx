@@ -4,9 +4,11 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 export default async function Home() {
 
-  const { results: products } = await (await getCloudflareContext()).env.DB.prepare(
-    "SELECT id, name, description, price, imageUrl FROM Products"
-  ).run();
+  // const { results: products } = await (await getCloudflareContext()).env.DB.prepare(
+  //   "SELECT id, name, description, price, imageUrl FROM Products"
+  // ).run();
+  const products: any[] = []
+
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

@@ -7,11 +7,13 @@ export default async function Page({
   }) {
     const page = (await params).dynamicPage;
 
-    const { results } = await (await getCloudflareContext()).env.DB.prepare(
-      "SELECT id, name, description, price, rating, imageUrl FROM products WHERE id = ?;"
-    )
-      .bind(1)
-      .run();
+    // const { results } = await (await getCloudflareContext()).env.DB.prepare(
+    //   "SELECT id, name, description, price, rating, imageUrl FROM products WHERE id = ?;"
+    // )
+    //   .bind(1)
+    //   .run();
+
+    const results: any[] = []
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
             <h1>Dynamic page {page}</h1>
