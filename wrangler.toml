@@ -10,3 +10,8 @@ minify = true
 
 # Use the new Workers + Assets to host the static frontend files
 assets = { directory = ".worker-next/assets", binding = "ASSETS" }
+
+[[d1_databases]]
+binding = "DB"
+database_name = "test-db"
+database_id = "e3297ae5-0c81-4521-b82a-d57cb97fab29"
