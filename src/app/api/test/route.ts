@@ -5,9 +5,10 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 export async function GET(request: Request) {
   try {
 
-    const results = await (await getCloudflareContext()).env.DB.prepare(
-      "SELECT id, name, description, price, imageUrl FROM Products"
-    ).run();
+        return;
+    // const results = await (await getCloudflareContext()).env.DB.prepare(
+    //   "SELECT id, name, description, price, imageUrl FROM Products"
+    // ).run();
 
     if (!results) {
       return NextResponse.json(
